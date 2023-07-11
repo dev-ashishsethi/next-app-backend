@@ -16,7 +16,6 @@ export async function PUT(req) {
 		} else {
 			return NextResponse.json('Please insert a valid username')
 		}
-    return NextResponse.json("asd")
 	} catch (e) {
 		console.error(e)
 	}
