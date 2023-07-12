@@ -12,6 +12,13 @@ const nextConfig = {
   publicRuntimeConfig: {
     API_ROOT_URL: process.env.NEXT_PUBLIC_API_ROOT_URL,
   },
+  headers:[{
+    source:'/read-users',
+    headers:[{
+      key:"Cache-Control",
+      value:"no-cache, no-store, max-age=0, must-revalidate"
+    }]
+  }]
 }
 
 module.exports = nextConfig
