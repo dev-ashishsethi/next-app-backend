@@ -31,7 +31,7 @@ export default function Home() {
  }
   useEffect(()=>{
     (async ()=>{
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_ROOT_URL}/read-users`).then(res=>res.json())
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_ROOT_URL}/read-users`,{cache: 'no-store' }).then(res=>res.json())
      setUsersList(response)
     })()
   },[changeCount])
